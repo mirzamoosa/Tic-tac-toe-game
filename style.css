@@ -1,0 +1,112 @@
+*{
+    box-sizing: border-box;
+} 
+body{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+}
+.players{
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 300px;
+    border-radius: 15px;
+    font-size: 20px;
+    margin-top: 50px;
+}
+.players div{
+    padding: 20px;
+    margin: 5px;
+    border-radius: 15px;
+    border: 2px blue;
+    font-size: 20px;
+
+}
+
+.players div.active{
+    
+    background: rgb(0, 13, 128);
+    color:rgb(255, 255, 255);
+}
+.game-board{
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: repeat(3 , auto);
+    
+}
+.cell{
+    height: 100px;
+    width: 100px;
+    font-size:100px;
+    border: 1px solid #0909ad  ; 
+    cursor: pointer;
+}
+.cell:nth-child(1), .cell:nth-child(2), .cell:nth-child(3){
+    border-top: none;
+
+}
+.cell:nth-child(7), .cell:nth-child(8), .cell:nth-child(9){
+    border-bottom: none;
+}
+.cell:nth-child(1), .cell:nth-child(4), .cell:nth-child(7){
+    border-left:none;
+}
+.cell:nth-child(3), .cell:nth-child(6), .cell:nth-child(9){
+    border-right: none;
+
+}
+.result{
+    position: fixed;
+    top:0;
+    left: 0;
+    right:0;
+    bottom:0;
+    z-index: 99;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.result h1{
+    color:#fff;
+    font-size: 24px;
+    background-color: #60ad09;
+    padding:15px;
+}
+
+.result button{
+    font-size: 24px;
+    background-color: #09ad76;
+    color:#fff;
+    border-radius: 15px;
+    cursor: pointer;
+    padding: 10px;
+}
+.inactive{
+    display:none;
+}
+.disabled{
+    pointer-events: none;
+}
+.score_board {
+    font-size: 20px;
+    align-items: center;
+    display: flex;
+    
+  }
+  
+  .score_board {
+    color: #6bcddf;
+  }
+  
+ 
+  
+
+  
